@@ -10,7 +10,7 @@ source("helpers.R")
 ui <- fluidPage( 
         headerPanel(
           list(tags$head(tags$title("shiny app"),tags$style("body {background-color:#e0e0d1; }")),
-             tags$div(style="color:#0066ff",tags$h1("Mapping function")))
+             tags$div(style="color:#0066ff",tags$h1("Demographic Plots")))
         ),
         tabsetPanel(type = "pills",
           tabPanel("About",tags$div(style="margin-top:40px;font-size:18px;",column(offset=2,width =9,
