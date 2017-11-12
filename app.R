@@ -17,7 +17,7 @@ ui <- fluidPage(
                    "This application is designed to generate a world map 
                    where the user gets to select different demographic information to overlay the map.
                    The user is also able to switch the color palette of the map. The demographic information
-                   entered in the text box is selected from the different \"field id\" numbers found in the Factbook 
+                   selected in the text box is from the different \"field id\" numbers found in the Factbook 
                    XML file." ,tags$br(), "
                    Factbook data from this app can be found at this",
                    tags$a(href="https://www.cia.gov/library/publications/the-world-factbook/geos/xx.html",
@@ -30,8 +30,10 @@ ui <- fluidPage(
                      sidebarPanel(selectInput(inputId = "palette",label="input palette ",
                                               choices=c("YlOrRd","Set1","BuGn","Blues")),
                                   selectInput(inputId = "field",label = "input field",
-                                  choices=c("f2091","f2225","f2228","f2054","f2066","f2223","f2089","f2153","f2229"),
-                                  selected="f2091")),
+                                  choices=c("Infant Mortalilty Rate"="f2091","Health Expenditures"="f2225","Obesity - Adult Prevalence"="f2228","Birth Rate"="f2054",
+                                    "Death Rate"="f2066","Maternal Mortality Rate"="f2223","Idustrial Production Growth Rate"="f2089",
+                                     "Internet Users"="f2153","Unemployment; Age 15-24"="f2229"),
+                                  selected="Infant Mortality Rate"="f2091")),
                      mainPanel(plotOutput("mapIt")
                                )
                      )
