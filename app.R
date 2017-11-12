@@ -1,4 +1,4 @@
-#setwd("C:/Users/mateo/Desktop/school/math 399/shiny") 
+setwd("C:/Users/mateo/Desktop/school/math 399/shiny") 
 
 library(shiny)
 library(R.utils)
@@ -27,7 +27,8 @@ ui <- fluidPage(
                     "book was an essential tool for creating this shiny app."))),
             tabPanel("Map It!",sidebarLayout(
                      
-                     sidebarPanel(selectInput(inputId = "palette",label="input palette ",choices=c("YlOrRd")),
+                     sidebarPanel(selectInput(inputId = "palette",label="input palette ",
+                                              choices=c("YlOrRd","Set1","BuGn","Blues")),
                                   selectInput(inputId = "field",label = "input field",
                                   choices=c("f2091","f2225","f2228","f2054","f2066","f2223","f2089","f2153","f2229"),
                                   selected="f2091")),
