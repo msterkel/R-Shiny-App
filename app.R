@@ -1,4 +1,4 @@
-setwd("C:/Users/mateo/Desktop/school/math 399/shiny") 
+#setwd("C:/Users/mateo/Desktop/school/math 399/shiny") 
 
 library(shiny)
 library(R.utils)
